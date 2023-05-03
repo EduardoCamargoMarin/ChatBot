@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crystal</title>
+</head>
+<body>
+    <input type="text" id="question" oninput="changeToLowerCase()" placeholder="Pergunte algo">
+    <input type="button" value="Buscar" onclick="question()">
+
+    <div>Pergunta:<span id="outputValue"></span></div>
+    <div>Safira:<span id="outputAnswer"></span></div>
+    <div>
+        <span id="option01"></span>
+        <span id="option02"></span>
+        <span id="option03"></span>
+    </div>
+
+    <script src="/Chatbot/Safira/index.js"></script>
+</body>
+</html>

@@ -1,21 +1,20 @@
 //Safira alem das principais tarefas de responder questionamento simples, também indica assuntos pertinentes sobre o site
 
 //armazenamento das perguntas feitas ao chatbot
-const botMessage = [
-    'qual o seu nome',
-    'qual a sua função',
-    'qual a sua funcao',
-    'vagas de emprego',
-    'vagas',
-    'novidades',
-    'me conte as novidades',
-]
-
-
-
-
 
 function question() {
+
+    const botMessage = [
+        'qual o seu nome',
+        'qual a sua função',
+        'qual a sua funcao',
+        'vagas de emprego',
+        'vagas',
+        'novidades',
+        'me conte as novidades',
+        'limpar',
+    ]
+
     let inputQuestion = document.getElementById('question').value
     let outputQuestion = document.getElementById('outputValue')
 
@@ -27,7 +26,7 @@ function question() {
 
     outputQuestion.innerText = `${inputQuestion}?`
 
-    if(inputQuestion === 'qual o seu nome') {
+    if(inputQuestion === botMessage[0]) {
         outputQuestion.innerText = `${inputQuestion}?`
         answer.innerText =  'Sou a Lara'
         let btnAction = document.createElement('button')
@@ -41,17 +40,13 @@ function question() {
         btnOption01.appendChild(btnAction) // faz aparecer o elemento criado no js
 
     }
-    if(inputQuestion === 'qual a sua função' || inputQuestion === 'qual a sua funcao') {
+    if(inputQuestion === botMessage[1] || inputQuestion === botMessage[2]) {
         
         outputQuestion.innerText = `${inputQuestion}?`
         answer.innerText =  'Sou uma ChatBot de teste para fins de auxiliar o usuário.' 
 
-        let btnAction = document.createElement('button')
-        btnAction.innerHTML = 'Veja as funcionalidades'
-        
-        btnOption01.appendChild(btnAction) 
     }
-    if(inputQuestion === 'vagas de emprego' || inputQuestion === 'vagas') {
+    if(inputQuestion === botMessage[3] || inputQuestion === botMessage[4]) {
         outputQuestion.innerText = `Possuem ${inputQuestion}?`
         answer.innerText =  'Atualmente estamos contratando para as seguintes vagas..... '
         let btnAction = document.createElement('button')
@@ -59,7 +54,7 @@ function question() {
         
         btnOption02.appendChild(btnAction) 
     }
-    if(inputQuestion === 'novidades' || inputQuestion === 'me conte as novidades') {
+    if(inputQuestion === botMessage[5] || inputQuestion === botMessage[6]) {
         outputQuestion.innerText = ` ${inputQuestion}?`
         answer.innerText =  'Recebemos uma nova proposta de implantação de sistema para melhoria de processos ..... '  //usar randomização
         let btnAction = document.createElement('button')
@@ -68,7 +63,7 @@ function question() {
         
         btnOption01.appendChild(btnAction)
     }
-    if(inputQuestion === 'limpar' || inputQuestion ==='limpe') {
+    if(inputQuestion === botMessage[7]) {
         outputQuestion.innerText = ''
         answer.innerText = ''
     }

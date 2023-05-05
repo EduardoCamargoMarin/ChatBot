@@ -1,3 +1,6 @@
+body {
+  background-color: black !important;
+}
 .chatbot-container {
     width: 350px;
     border: 1px solid #ccc;

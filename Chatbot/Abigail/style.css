@@ -1,0 +1,107 @@
+body {
+    background-color: black !important;
+  }
+  .chatbot-container {
+      width: 350px;
+      border: 3px solid #292929;
+      border-radius: 20px;
+      overflow: hidden;
+    }
+    
+    .chat-header {
+      display: flex;
+      align-items: center;
+      padding: 10px;
+      background-image: linear-gradient(90deg, #000000,#252525,#000000);
+    }
+    
+    .chat-header img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      margin-right: 10px;
+      border: 3px solid #000000;
+    }
+    
+    .chat-body {
+      height: 300px;
+      padding: 10px;
+      overflow-y: scroll;
+      background-image: linear-gradient(90deg, #000000,#656565,#000000);
+      border: 4px solid #000000;
+    }
+    .chat-body::-webkit-scrollbar {
+      background-image: linear-gradient(90deg, #000000,#ffffff,#000000);
+      border-radius: 20px;
+    }
+    
+    .chat-message {
+      margin: 10px;
+      padding: 10px;
+      border-radius: 5px;
+      
+    }
+    
+    .received {
+      background-color: #e8e8e8;
+      border-radius: 10px 20px 50px;
+      border: 3px solid #000000;
+    }
+    .received01 {
+      border-radius: 10px 20px 50px;
+
+    }
+    
+    .sent {
+      color: #ffffff;
+      text-align: right;
+      border-radius: 50px 20px 10px;
+    }
+    .options {
+      background-color: red;
+    }
+    
+    
+    .chat-input {
+      display: flex;
+      align-items: center;
+      padding: 10px;
+      background-image: linear-gradient(90deg, #000000,#252525,#000000);
+    }
+    
+    .chat-input input {
+      flex: 1;
+      padding: 10px;
+      border-radius: 5px;
+      border: none;
+    }
+    
+    .btnSent {
+      padding: 10px;
+      border-radius: 5px;
+      border: none;
+      margin-left: 10px;
+      background-image: linear-gradient(90deg, #000000,#656565,#000000);
+      color: white;
+      transition: .2s;
+    }
+    .btnSent:hover {
+      animation: send .1s ease-in-out forwards;
+    }
+    @keyframes send {
+      0% {
+        background-image: linear-gradient(90deg, #ffffff,#000000,#000000);
+      }
+      50% {
+        background-image: linear-gradient(90deg, #ffffff,#ffffff,#000000);
+      }
+      75% {
+        background-image: linear-gradient(90deg, #ffffff,#ffffff,#ffffff);
+        color: #000000;
+      }
+      100% {
+        background-image: linear-gradient(90deg, #ffffff,#ffffff,#ffffff);
+        color: #000000;
+      }
+    }
+    

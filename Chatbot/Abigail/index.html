@@ -12,21 +12,12 @@
     <title>Document</title>
 </head>
 <body>
-    <label for="browser"></label>
-    <input list="browsers" name="browser" id="browser">
-    
-    <datalist id="browsers">
-      <option value="Edge">
-      <option value="Firefox">
-      <option value="Chrome">
-      <option value="Opera">
-      <option value="Safari">
-    </datalist>
 
-  <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">Enable body scrolling</button>
+  <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">Open ChatBot</button>
 
-  <div  style="background-image: linear-gradient(90deg, #656565,#ffffff,#656565); ;" class="offcanvas offcanvas-end" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+  <div  style="background-image: linear-gradient(90deg, #000000,#252525,#000000);border: 1px solid #CFB776;" class="offcanvas offcanvas-end" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
     <div class="offcanvas-header">
+      <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">&times;</button>
       <h5 class="offcanvas-title" id="offcanvasScrollingLabel">ChatBot</h5>
       <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     </div>
@@ -34,7 +25,7 @@
       <div class="chatbot-container">
         <div class="chat-header">
           <img src="./c2cdeecac8df13fe9e1741d5a3383c1a159c2e5fr1-400-397v2_uhq.jpg" alt="Chatbot Avatar">
-          <h2 style="color: #ffffff;">Abigail</h2>
+          <h2 style="color: #CFB776;">Abigail</h2>
         </div>
         <div class="chat-body">
           <div class="chat-message received">Olá! Eu sou Abigail, como posso ajudar?</div>
@@ -44,7 +35,8 @@
         </div>
         <div class="chat-input">
             <label for="question"></label>
-          <input list="question" name="question" type="text" id="questions" oninput="changeToLowerCase()" placeholder="Digite sua mensagem...">
+          <input list="question" name="question" style="border:1px solid #CFB776" type="text" id="questions" oninput="changeToLowerCase()" placeholder="Digite sua mensagem...">
+
           <datalist id="question">
             <option class="options" value="qual o seu nome">
             <option class="options" value="qual a sua função">
@@ -52,10 +44,15 @@
             <option class="options" value="novidades">
             <option class="options" value="limpar">
           </datalist>
-          <input type="button" class="btnSent" value="Enviar" onclick="question()">
+          <input type="button" class="btnSent" style="border:1px solid #CFB776" value="Enviar" onclick="question()">
         </div>
       </div>
     </div>
+    <select class="chat-input" name="question" onchange="selectMessage()" id="options">
+      <option>Selecione a pergunta</option>
+      <option value="op1">Qual o seu nome</option>
+      <option value="op2">Qual a sua função</option>
+    </select>
   </div>
 
 

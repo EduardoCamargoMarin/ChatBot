@@ -36,6 +36,11 @@ body {
     .chat-body::-webkit-scrollbar {
       background-image: linear-gradient(90deg, #000000,#252525,#000000);
       border-radius: 20px;
+      width: 10px;
+    }
+    .chat-body::-webkit-scrollbar-thumb {
+      background-image: linear-gradient(90deg,#000000,#CFB776,#000000);
+      border-radius: 20px;
     }
     
     .chat-message {
@@ -72,6 +77,7 @@ body {
       align-items: center;
       padding: 10px;
       background-image: linear-gradient(90deg, #000000,#101010,#000000);
+      color: #f1f1f1;
     }
     
     .chat-input input {
@@ -83,6 +89,15 @@ body {
     }
     .chat-input input:hover {
      animation:send .2s ease-in-out forwards;
+    }
+    .option-input {
+      border: 1px solid #CFB776;
+      border-radius: 10px;
+      background-color: #101010;
+    }
+    .option-input:hover {
+      color: #CFB776;
+      text-shadow: 0px 0px 10px #CFB776;
     }
     
     .btnSent {
@@ -111,5 +126,22 @@ body {
         background-image: linear-gradient(90deg, #ffffff,#ffffff,#ffffff);
         color: #000000;
       }
+    }
+    .btn-btn-chatbot {
+      width: 6em;
+      height: 6em;
+      border-radius: 200px;
+      border: 3px solid #CFB776;
+      background-color: #101010;
+      color: #f1f1f1;
+      position: fixed;
+    }
+    .btn-btn-chatbot-exit {
+      width: 3em;
+      height: 3em;
+      border-radius: 200px;
+      border: 3px solid #CFB776;
+      background-color: #101010;
+      color: #f1f1f1;
     }
     

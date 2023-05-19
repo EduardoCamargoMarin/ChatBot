@@ -72,9 +72,10 @@ function question() {
         outputQuestion.innerText = ''
         answer.innerText = ''
     }
+
     if(inputQuestion !== botMessage[0] && inputQuestion !== botMessage[2] && inputQuestion !== botMessage[3] && inputQuestion !== botMessage[4] && inputQuestion !== botMessage[5] && inputQuestion !== botMessage[6] && inputQuestion !== botMessage[7] ) {
         outputQuestion.innerText = ` ${inputQuestion}`
-        answer.innerText =  'Desculpa, mas não entendi o que você falou'
+        answer.innerText =  'Desculpa, mas não entendi o que você falou, use uma das opções abaixo para eu poder te orientar melhor ou use o comando #comando'
         containerSent.style.backgroundColor = '#151515'
         containerSent.style.border = '1px solid #CFB776'
         containerReceived.style.backgroundColor = '#0e0e0e'
@@ -83,6 +84,10 @@ function question() {
 }
 
 function selectMessage() {
+    let outputQuestion = document.getElementById('outputValue')
+    let containerSent = document.getElementById('containerSent')
+    let containerReceived = document.getElementById('containerReceived')
+
     const botMessage = [
         'qual o seu nome',
         'qual a sua função',
@@ -98,11 +103,41 @@ function selectMessage() {
     let selectedOption = select.value
     let answer = document.getElementById('outputAnswer')
 
-    let outputOption = document.getElementById('outputValue')
     
     if(selectedOption === 'op1') {
-        outputOption = `${botMessage[0]}`
-        answer.innerText = 'Sou Abigail'
+        containerSent.style.backgroundColor = '#151515'
+        containerSent.style.border = '1px solid #CFB776'
+        containerReceived.style.backgroundColor = '#0e0e0e'
+        containerReceived.style.border = '1px solid #CFB776'
+        answer.innerText = '...'
+        outputQuestion.innerText = `${botMessage[0]}`
+        answer.style.animation = 'send .2s linear infinite'
+       
+
+        setTimeout(() => {
+            containerReceived.style.backgroundColor = '#0e0e0e'
+            containerReceived.style.border = '1px solid #CFB776'
+             answer.innerText = 'Sou Abigail'
+             
+             answer.style.animation = 'none'
+        }, 1000);
+    }
+    if(selectedOption === 'op2') {
+        containerSent.style.backgroundColor = '#151515'
+        containerSent.style.border = '1px solid #CFB776'
+        containerReceived.style.backgroundColor = '#0e0e0e'
+        containerReceived.style.border = '1px solid #CFB776'
+        answer.innerText = '...'
+        outputQuestion.innerText = `${botMessage[1]}`
+        answer.style.animation = 'send .2s linear infinite'
+       
+
+        setTimeout(() => {
+            containerReceived.style.backgroundColor = '#0e0e0e'
+            containerReceived.style.border = '1px solid #CFB776'
+             answer.innerText = 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae accusamus debitis tenetur minus modi quas doloremque, obcaecati culpa neque aut corrupti sit voluptatum laudantium eum dolorem quis rem dolor ipsum.'
+             answer.style.animation = 'none'
+        }, 1000);
     }
 
 

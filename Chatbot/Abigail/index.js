@@ -117,7 +117,7 @@ function selectMessage() {
         setTimeout(() => {
             containerReceived.style.backgroundColor = '#0e0e0e'
             containerReceived.style.border = '1px solid #CFB776'
-             answer.innerText = 'Sou Abigail'
+             answer.innerText = 'Sou Abigail, veja mais sobre\n '
              
              answer.style.animation = 'none'
         }, 1000);
